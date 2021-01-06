@@ -1,9 +1,9 @@
 import streamlit as st
-from keras.models import load_model
+import tensorflow as tf
 from PIL import Image
 import numpy as np
 
-model = load_model("model.sav")
+model = tf.keras.models.load_model("model.sav")
 
 def predict_object(image_file):
     image = Image.open(image_file) 
